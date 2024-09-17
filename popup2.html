@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Course Brochure Popup</title>
+    <style>
+       
+       .popup8 {
+  width: 450px;
+  padding: 55px;
+  background-color: #0574BD;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  text-align: center;
+  display: none; /* Initially hidden */
+}
+
+.popup8 h2 {
+  margin-bottom: 20px;
+}
+
+
+.backdrop-8 .form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.backdrop-8 .form-row input {
+  width: 48%;
+}
+
+
+.backdrop-8 .form-row input:not(:last-child) {
+  margin-right: 10px;
+}
+
+.backdrop-8 input[type="text"], input[type="email"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.backdrop-8 input[type="submit"] {
+  padding: 10px 20px;
+  background-color: white;
+  color: #0574BD;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 50%;
+  height: 41px;
+}
+
+.backdrop-8 input[type="submit"]:hover {
+  background-color: #0464A5;
+  color: white;
+  border: 1px solid #FFCDD2;
+}
+
+.backdrop-8 .close-btn8 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.backdrop-8 .close-btn8:hover {
+  color: #FFCDD2;
+  
+}
+.backdrop-8{
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+<div class="backdrop-8" id="bg-8">
+<div class="popup8" id="popup8">
+    <button class="close-bt" id="close-btn8">&times;</button>
+    <h2>Get a Free Course Brochure</h2>
+    <form>
+        <div class="form-row">
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+        </div>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</div>
+<button onclick="showpopup8()">show popup</button>
+<script>
+    // Script to handle popup display and close functionality
+    document.getElementById('close-btn8').addEventListener('click', function() {
+        document.getElementById('popup8').style.display = 'none';
+         bg8.style.display = 'none'
+    });
+
+    // You can trigger the popup display with some other event, for example:
+    // document.getElementById('popup').style.display = 'block';
+
+    let bg8 = document.getElementById('bg-8')
+    function showpopup8(){
+        document.getElementById('popup8').style.display = 'block';
+        bg8.style.display = 'block'
+    }
+</script>
+
+</body>
+</html>

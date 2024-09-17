@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .backdrop-2{
+        width: 100%;
+        background:rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: fixed;
+        display: none;
+    }
+
+    .popup-2{
+        background: #f7f2f2;
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    .popup-2 input{
+        width:300px;
+        height: 38px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #929292;
+    }
+
+    .popup-2 button{
+        height: 38px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        background: #27AAE1;
+        border: 1px solid #27AAE1;
+        border-radius: 5px;
+        color: #fff;
+        box-shadow: 3px 3px 8px #929292;
+    }
+
+    .popup-2 h2{
+        text-align: center;
+        color: #0b84b8;
+        font-size: 34px;
+    }
+
+    .popup-2 input:focus{
+        outline: none;
+    }
+    .close-btn-2{
+        font-size: 25px;
+        transform: translate(280px, 11px);
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <div class="backdrop-2" id="show">
+    <div class="popup-2">
+        <span class="close-btn-2" id="closePopup2" onclick="closepopup2()">&times;</span>
+        <h2>Apply Now</h2>
+
+        <input type="text" name="name" placeholder="Enter Name*" required>
+
+        <input type="email" name="email" placeholder="Enter Email*" required>
+
+        <input type="tel" name="phone" placeholder="enter Phone No.*" required>
+
+        <button >Submit</button>
+    </div>
+    </div>
+
+
+<button  onclick="showpopup2()"> show</button>
+<script>
+let show2 = document.getElementById('show');
+
+function showpopup2(){
+    show2.style.display= "flex"
+}
+
+function closepopup2(){
+    show2.style.display = "none"
+}
+</script>
+</body>
+</html>

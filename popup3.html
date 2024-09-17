@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Offer</title>
+    <style>
+        .backdrop-9 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .container9 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .popup-new9 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            padding: 20px;
+            width: 700px; /* Adjust based on actual image size */
+            height: 350px; /* Adjust based on actual image size */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            color: white;
+            position: relative;
+            background: #0C73C4;
+        }
+
+        .form9 {
+            padding-left: 20px;
+        }
+
+        .form9 h2 {
+            margin-bottom: 15px;
+        }
+
+        .form9  input[type="email"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 200px; /* Adjust as needed */
+            border-radius: 5px;
+            border: none;
+        }
+
+        .button9 {
+            padding: 10px 20px;
+            background-color: #0464A5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button9:hover {
+            background-color: white;
+            color: #0464A5;
+        }
+
+        /* Close button styling */
+        .close-btn9 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .close-btn9:hover {
+            color: #FFCDD2;
+        }
+
+        .left-popup {
+            width: 50%;
+        }
+
+        .right-popup {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="backdrop-9" id="bg-9">
+        <div class="container9" id="popup9">
+            <div class="popup-new9">
+                <button class="close-btn9" id="close-btn9" onclick="hidepopup9()">&times;</button>
+                <div class="left-popup">
+                    <img src="images/discount.png" style="width: 465px;">
+                </div>
+                <div class="right-popup">
+                    <div class="form9"></div>
+                    <h2>Get up to 20% Discount</h2>
+                    <input type="text" id="name" name="name" placeholder="Enter Name">
+                    <input type="email" id="email" name="email" placeholder="Enter Email"><br>
+                    <button class="button9">Get 20% Off</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="showpopup9()">discount popup</button>
+
+    <script>
+        let bg9 = document.getElementById('bg-9')
+       function showpopup9(){
+        bg9.style.display= 'block'
+       }
+
+       function hidepopup9(){
+         bg9.style.display= 'none'
+       }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Offer</title>
+    <style>
+        .backdrop-9 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .popup-new {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            padding: 20px;
+            width: 700px; /* Adjust based on actual image size */
+            height: 350px; /* Adjust based on actual image size */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            color: white;
+            position: relative;
+            background: #0C73C4;
+        }
+
+        .form {
+            padding-left: 20px;
+        }
+
+        .form h2 {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="email"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 200px; /* Adjust as needed */
+            border-radius: 5px;
+            border: none;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #0464A5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: #0464A5;
+        }
+
+        /* Close button styling */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #FFCDD2;
+        }
+
+        .left-popup {
+            width: 50%;
+        }
+
+        .right-popup {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="backdrop-9" id="bg-9">
+        <div class="container" id="popup">
+            <div class="popup-new">
+                <button class="close-btn" id="close-btn">&times;</button>
+                <div class="left-popup">
+                    <img src="images/discount.png" style="width: 465px;">
+                </div>
+                <div class="right-popup">
+                    <div class="form"></div>
+                    <h2>Get up to 20% Discount</h2>
+                    <input type="text" id="name" name="name" placeholder="Enter Name">
+                    <input type="email" id="email" name="email" placeholder="Enter Email"><br>
+                    <button class="button">Get 20% Off</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="showpopup9()">discount popup</button>
+
+    <script>
+        let bg9 = document.getElementById('bg-9');
+        let popup = document.getElementById('popup');
+
+        // Close button functionality
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('bg-9').style.display = 'none';
+        });
+
+        // Function to show the popup
+        function showpopup9() {
+            bg9.style.display = 'flex';  // Set display of backdrop to 'flex' so it's visible and centered
+        }
+    </script>
+</body>
+</html> -->
